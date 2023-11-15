@@ -1,0 +1,197 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : pProgramme
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1b0d126f001bc20e
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : EXE_DésinstalleService
+     procedure_id : 1949234524623530800
+     type_code : 15
+     code : |1-
+      // Résumé : (Mode exécutable seulement) Désinstalle le service
+      PROCEDURE EXE_DésinstalleService()
+      
+      	SI EnModeTest OU EnModeService ALORS RETOUR
+      
+      	// Ouvre la fenêtre de suivi
+      	OuvreFille(FEN_Install)
+      
+      	// Statut	
+      	FEN_Install.LIB_INFO = "Arrêt du service..."
+      	Temporisation(1, tempoDessin)
+      	
+      	// Arrête le service
+      	si serviceetat(service_nom) = serviceEtatArrêté _ou_ ServiceArrête(SERVICE_NOM) alors
+      			
+      		// Statut	
+      		FEN_Install.LIB_INFO = "Désinstallation du service..."
+      		Temporisation(1, tempoDessin)
+      		
+      		// Désinstalle le service
+      		SI ServiceDésinstalle(SERVICE_NOM) ALORS
+      			
+      			// Informe l'utilisateur
+      			Info("Le service a été correctement désinstallé")
+      		sinon
+      			
+      			// Affiche l'erreur
+      			Erreur()
+      		FIN
+      	sinon
+      	
+      		// Affiche l'erreur
+      		erreur()	
+      	fin
+      
+      	// Fermeture de la fenêtre de suivi
+      	Ferme(FEN_Install)
+      	
+      	// Fin du programme
+      	FinProgramme(Vrai)
+     type : 458752
+   -
+     name : EXE_InstalleService
+     procedure_id : 1949234524623596367
+     type_code : 15
+     code : |1-
+      // Résumé : (Mode exécutable seulement) Installe le service
+      PROCEDURE EXE_InstalleService()
+      
+      	si enmodetest ou EnModeService alors retour
+      	
+      	// Ouvre la fenêtre de suivi
+      	OuvreFille(FEN_Install)
+      	
+      	// Statut
+      	FEN_Install.LIB_INFO = "Installation du service..."
+      	Temporisation(1, tempoDessin)
+      	
+      	// Paramétrage du service
+      	Service.DescriptionLongue	= "Exemple de service Windows réalisé avec WINDEV " + VersionWinDev(versionVM)[[A 2]]			// Libellé descriptif du service
+      	Service.Description 		= "PC SOFT Exemple de service WINDEV"														// Nom complet du service
+      	Service.Type 				= serviceTypeSimple																	// Service standard fonctionnant seul dans son processus
+      	Service.Démarrage 			= serviceDémarrageAutomatique														// Démarrage automatique après l'initialisation du système
+      	Service.ErreurDémarrage 	= serviceErreurLog																	// Le système inscrit l'échec de démarrage du service dans le journal de l'observateur d'événement
+      	Service.LigneCommande 		= """" + ExeInfo(exeNom) + """"														// Chemin complet de l'exécutable en cours
+      	
+      	// Installe le service
+      	SI ServiceInstalle(SERVICE_NOM) ALORS
+      		
+      		// Statut
+      		FEN_Install.LIB_INFO = "Démarrage du service..."
+      		Temporisation(1, tempoDessin)
+      		
+      		// Démarre le service
+      		si ServiceDémarre(SERVICE_NOM) alors
+      		
+      			// Informe l'utilisateur
+      			Info("Le service a été correctement installé")
+      		sinon
+      			
+      			// Affiche l'erreur
+      			erreur()
+      		fin
+      	SINON
+      		
+      		// Affiche l'erreur
+      		Erreur()
+      	FIN
+      	
+      	// Fermeture de la fenêtre de suivi
+      	Ferme(FEN_Install)
+      	
+      	// Fin du programme
+      	FinProgramme(Vrai)
+     type : 458752
+   -
+     name : SurLigneCommande
+     procedure_id : 1949234524623661934
+     type_code : 15
+     code : |1-
+      // Résumé : Traite la ligne de commande
+      PROCEDURE SurLigneCommande()
+      
+      	selon LigneCommande(1)
+      		
+      		// Paramètre pour installer le service
+      		cas "-i", "-install", "install"
+      			
+      			// On ne peut pas exécuter l'installation du service en mode service
+      			si pas EnModeService ALORS
+      				
+      				// On ne peut pas exécuter l'installation du service en mode test
+      				si pas EnModeTest ALORS
+      					
+      					// Lance l'installation du service
+      					EXE_InstalleService()
+      					
+      				sinon
+      					
+      					// On arrête le programme
+      					FinProgramme("L'installation du service ne peut être effectuée en mode test.")
+      				FIN
+      				
+      			FIN
+      			
+      		// Paramètre pour désinstaller le service
+      		CAS "-u", "-r", "-remove", "remove", "-uninstall", "uninstall"
+      			
+      			// On ne peut pas exécuter la désinstallation du service en mode service
+      			SI PAS EnModeService ALORS
+      				
+      				// On ne peut pas exécuter la désinstallation du service en mode test
+      				SI PAS EnModeTest ALORS
+      					
+      					EXE_DésinstalleService()
+      					
+      				SINON
+      					
+      					// On arrête le programme
+      					FinProgramme("La désinstallation du service ne peut être effectuée en mode test.")
+      				FIN
+      			FIN
+      			
+      		autres cas
+      		
+      			// En mode test
+      			si enmodetest alors
+      				
+      				// On arrête le programme
+      				FinProgramme("Ce projet n'est pas conçu pour être exécuté en mode test. Consultez le code de cet exemple pour de plus amples informations sur l'exécution d'un service.")
+      			sinon
+      				
+      				// En mode exécution
+      				si pas EnModeService alors
+      				
+      					// Ouvre la fenêtre d'installation manuelle
+      					ouvre(FEN_Install, vrai)
+      				sinon
+      				
+      					// Ecrit un événement indiquant que le service est démarré
+      					ServiceEcritEvénementJournal("Début d'exécution du service", ejInformation)
+      				fin
+      			FIN
+      	FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_Collection1
+resources :
+ string_res :
+  identifier : 0x1148aba60be24f74
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

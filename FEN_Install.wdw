@@ -1,0 +1,187 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Install
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Install
+ identifier : 0x2b06b0ac2a020f5f
+ internal_properties : CAAAAAgAAAAyTZ0B3SQUIKQ8CNHunG8JKpJlWN2ZNIYSgA4pYRPERqSzgorAknSYboH5ed3/9EB6pqWC9Lhncdze0Cuw0wfkMiqxNriGphu/48h6iRJpYdyxwMOGU3lnZ9dhdFLiwZ6eqZP3/nlPKPLxvTjtrxwkqrSPZjuB4nIcU8mCEIamwRMAMnQn64Rl5QiOWjaoh8TM32NGuCTO/J6E0aoYOsUjViF500a3UZffHoHFZgo2CPHP2b0alO9h6VEHZFzMZtN4XQpkvJLpga3mr/DBINmWPBZHjc6iczUOBguLfFxakwurYf/lAtGTpyWStJZk+NS4wOCHcrOuKYDqATBnF9fhrFEQH64GguYloeifMulZfrAx/1W/bpTZvOayL9l+A+RD1WH+5odLBM2A2waRdV4+X9+gruGpA81r42CGF9ZFYXqH+jGgRgzdzSbuwC57LgLtdCOobMNTUEWDu7eRRayj1Tq56RCQoNWSJSBbTt9ZkyGF/pCIZPA4V/MyYdBkr/alA24YOS+1HEcTjsX0nHVJHu5VFYgHnn1VM7bVd35Pd0jhk4zQ/h2EMHqtGSBaD9jif3sSsvYeNxV2eu4HMOW4HgQfEGvGUidQvO53xuagvAczK7KQFD3/g8O8D3kReHjUk3MnEluvuvoYbn9hg24A/MXvmFz7iTBqppRQZKYXxxY=
+ properties :
+  width : 318
+  height : 119
+  widthClient : 316
+  heightClient : 87
+ controls :
+  -
+    name : LIB_INFO
+    identifier : 0x2b06b0c62ca17256
+    internal_properties : CAAAAAgAAABYLsHmgTgwnsx91i7re+kFPHX//YAJu2MOzER35e2M3szULdi/ZD44/ju1re1HaEUTtSCifwgYFhPFT3SpTLv5mcGK1euXFVIRL4qMOePghcx1dmASjfky3jNuJ/AhIrwKZz1w6eEaa8BGJkzkdqEy4/afNpEVsCLh73mxCvuFbg9cy9Bu8ZWMhRsa5dU2u0tsOzFFpf9Ul4TjAJXc/9eyODCsBQznBQ9zo+D3bYshmmCy5uh0yXzgHx4vk9EYmg5VQ1xeXbkxpE8PMSXXHrXOj4mdNEgCl2rvbj1Zou1hFoixPmAcDSnGFSA/0DPDfAIgbjZL/w==
+    properties :
+     x : 6
+     y : 30
+     width : 304
+     height : 51
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : LIB_Exemple_de_service_WINDEV
+    identifier : 0x2b0d0f15158bab81
+    internal_properties : CAAAAAgAAAArn5l0Z1JP3w325djIVj/+4POquEn/t65cl1R09vzYlgQWEnMa/AJ6kxGtCIeYKpGn8RZHMF0pKJtQwqHMyURVzPfrQtZuW3410y37nGIjKPOSGqIoe1WByOdoZQhl3+WR8KT4Y6sCZpDER0Dn/hOtL0oRQuZPJJOtWOlY6S/YPZnCPDUXiG5HWxdzNtDJ1LLixJD3PgiR8l99ejzuu/ywiKB10McqcMl/+mZDZl8vu7P4HEW8nVoyw+LaXYBV5ddLGNDD3gQsQMBZSnlsWZ/ObRTiA6nHL/qSaCMeGYlbBK8jwpxfZmPuMAR+hDKMN4MdvInUmltup0E2C7+JlwiidQAOMZxcvTI+a2++YLV9u24JpZjEobrBGx8p
+    properties :
+     x : 6
+     y : 6
+     width : 304
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : LIB_INFOSERVICE
+    identifier : 0x2b0d2e3d0b1e5f0a
+    internal_properties : CAAAAAgAAABY1fJp6DfnUFbE9a4WxGzSFviNs1nhUiNonn5GmTekI+irDbCpXxcoOvqSV82PFXkj1G1QRZ20U76Egiu8i96+S2PpZohsG+61Fk/3UTKok1a+6ajr/+WJhmsVEmoiPxQwlYRMvsTLRjsVtRchffHr8EetwCx1Pb4D1Kg7gg92dfCi0EzuOJ7O/C64B7m68MUFpJ08FT27MBU31/GXKyJ1mboJlhPoDfNpOl8PIt5rRxgV25Dp4cyMlURUw6Tulm0Ih/taLijwNYYlCmVQ1qgtXtPrKUAZuiJtuKypYfjhlc5KIfcHAVUWnBd9lW6Wi+sHSEbnoJcfgAluU4R0p14pkEDSncua1OsON/CE0dJ6SErADoXYRoto/nSCHQ==
+    properties :
+     x : 6
+     y : 32
+     width : 304
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : BTN_INSTALL
+    identifier : 0x2b0d2e490bf98de6
+    internal_properties : CAAAAAgAAAC658X+D8pCmG2SCnCkCqHQy+wj6E+DYt75vgrA7b2rusrYN1eKYYp2yDfJ8rv2+zaBI9J88Ay/bM/jrY4i8lGJSgd76QBDCNQe1/5mxXuMSVPS9w6GiEbxwg7hLLvyLI9CpILaGoVB2QMuRq8MQWte/u9YLGUROdo3bud6PaMGwPDQO3VC/bL9qGYxvkuWv63qMl7GPvBjPo8wJ3XLskya2jhfnbT5BUVD7cj+Vp4hagcnFPVZbn3BrXsDJc3cfaKD+P947jHi7OWQW9Cdk+Nf3lVIYSiG2YfBmNQUg3l83M9TuOr6oMrb28Dkp72CrzRYALEWIW5KVBTZMFjSOfu8YcpazsTVqXZi2C4LxiZmgiMpILbUlJ0xDW4t+Snh1rrdiR3BGGh+pX1W1j+UTuhTHOgwU3YYPtTQ+T35xhjhFW8PD5AQR4WnK/iIdAP4UA5JWvLyYtIqPBUyZ8Hg+vR5WNdvWM42aWegeF4JyWYxW0NbdS/OpQHwDCs8wIMQyKeWeuSzcctWIxWBKdjYqFRC4hsqMdQgcRV29Ttb5Vt3DxhiZ+Q+Zy4eqbo2xvimB+8PpCUWdjub6o17KUSjXZ/Fpv/qdY+k8wIY0bBGrSEN3t+Vb9fUZqfp+UTur1A592HSHnvhASRfn09Cm9Ul/4QMs9K3QA==
+    properties :
+     x : 144
+     y : 57
+     width : 80
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         // Vérifie si le service existe
+         SI ServiceExiste(SERVICE_NOM) ALORS
+         	
+         	// Désinstalle le service
+         	EXE_DésinstalleService()
+         	
+         sinon
+         	
+         	// Installe le service
+         	EXE_installeService()
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Quitter
+    identifier : 0x2b0d2e4f0c4aa482
+    internal_properties : CAAAAAgAAACXib31+/kT2sguGVNUP4j7tDJdadvkFIkXiARVJVo+Z3Aqp/L/ljiM93H2EnDpbH3Pd74Ez+zAKIhOEa+PXplj2QBuG6ziskrpuBtFp6htdcHwDQZOtPpp4LJGs4JQMnTFSzP7SFPiI+f9+e9MxrtvjKINfNfopAyLqA/dBCq8CHMWJQUNsOLltMi7R+iNW7JJCZg4W39LaG89ws/KWKdjGOuCEetW+LpJJtPBooLYw8FpSK1fDvek61zuGhTNIbLX1xSGCWQ7B8pfl9tzFgYnywIOdrr7vwY1aiO6dKzlsvbtUMBKL3UULwshdAaIH2mU9W+wGzjPhAmBB24I/6tQSDAfLFbfTid2oYNloJDmjgb3ea6kUIC0XyfO5TGtDID86Zo1cvrP7keBo/3KBB7pmyZHbXLIO/FeQPa1oPIPY0i1omA4uxRWqaUnAIVqaFpCrnVO2n6bFWHprtfYBsLfryUwpIoe3mDc66OlT6Tty0YrZM1Eu/yniKRtajlmWvH11l/rAS+D/Mf66OouRqja+aW/2ySELu5C8KTtpV9h4WPAwG7arzNXEQ4fEeCzF6AmISa0cw26m7FwgPHoZK3rnFCElbymGZKwyMxKeEvlYvBBQEJNOfebc8bAKAuRLsQ4QxikEAliYkMiIOL+XDXGomY=
+    properties :
+     x : 230
+     y : 57
+     width : 80
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         FinProgramme(vrai)
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x2b06b0ac2a040f5f
+  internal_properties : CAAAAAgAAAD7S+2GOLjEeheq9Y6YZGIRPpLnwB8KUS2je4S4X5oxSGrv51WBBaVxxbk/BTEdUwW0fnnvlhQNIBAuQTAO0S9+S8FMTvDhqkS1JydqFJBfHlbZSFzBkZAjjJ5aIH/cuMnF4Pme57TAyYvjnlkzTJmN5UX9hu+BEl3AsIsso5gsz3oX/KHp1ai/xWZCb54MlUFXdWmT2EOpULKqea/LH9EOlTkaiWsV2aM2/FfXQjTSY3NhAR6zEzKHYKVJwiZULchG0D4LNvRbPifZJPDMmlF6ptz+Rg0QN6SXG5jU7HifIzmkonwDFnOJQw==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABkTKIBkTakNd6/87ndo+fJVsKe17JyX6RlCI7LLgRETo1eFSQNGREzqlRMTO2OIK0nQsZHn9rqCdInaiu3jUNq8T+uvSsGbRUvXoUZPScSOfgtB9VCuNjt9Jc4ow==
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      
+      procedure FEN_Install(ModeManuel = faux)
+      
+      // Mode manuel (pour installation ou désinstallation)
+      si ModeManuel ALORS
+      	
+      	// Vérifie si le service existe
+      	si ServiceExiste(service_nom) alors
+      		
+      		// Propose de désinstaller le service
+      		LIB_INFOSERVICE = "Le service est installé."
+      		BTN_INSTALL..libelle = "Dés&installer"
+      	sinon
+      		
+      		// Propose d'installer le service
+      		LIB_INFOSERVICE = "Le service n'est pas installé."
+      		BTN_INSTALL..Libellé = "&Installer"			
+      	FIN
+      	
+      	// Plan 2	
+      	FEN_Install..plan = 2
+      sinon
+      	
+      	// Plan par défaut
+      	FEN_Install..Plan = 1
+      FIN
+   -
+     code : |1-
+      
+      si pas ModeManuel alors Sablier(Vrai)
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+      SI PAS ModeManuel ALORS Sablier(faux)
+     type : 2
+   -
+     type : 11
+   -
+     type : 12
+   -
+     type : 17
+   -
+     type : 13
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : FEN_Fenêtre1
+resources :
+ string_res :
+  identifier : 0x1148aba60be74f74
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe
